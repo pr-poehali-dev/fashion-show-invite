@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button';
 import Icon from '@/components/ui/icon';
 
 const Index = () => {
+  const [isEnvelopeOpen, setIsEnvelopeOpen] = useState(false);
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
     hours: 0,
@@ -36,8 +37,61 @@ const Index = () => {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
   };
 
+  const handleEnvelopeClick = () => {
+    setIsEnvelopeOpen(true);
+  };
+
+  if (!isEnvelopeOpen) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-[#f5f1ea] via-[#ede8dc] to-[#f5f1ea] flex items-center justify-center p-6 overflow-hidden">
+        <div className="max-w-4xl mx-auto text-center relative">
+          <div 
+            className="relative group cursor-pointer transition-all duration-700 hover:scale-105"
+            onClick={handleEnvelopeClick}
+          >
+            <img 
+              src="https://cdn.poehali.dev/files/010aaffd-fc59-4109-ac42-d3a973af64ba.png" 
+              alt="Envelope" 
+              className="w-full max-w-3xl mx-auto drop-shadow-2xl transition-all duration-700 group-hover:drop-shadow-[0_25px_50px_rgba(0,0,0,0.3)]"
+            />
+            
+            <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+              <div className="text-center px-8 max-w-xl">
+                <h1 className="text-3xl md:text-5xl lg:text-6xl font-cormorant font-light text-[#4a3f35] mb-4 leading-tight">
+                  Ваш Билет на ногах<br />
+                  капсульной коллекций колежды<br />
+                  «Я достоточно хороша!»
+                </h1>
+              </div>
+            </div>
+
+            <div className="absolute bottom-[15%] left-1/2 -translate-x-1/2 pointer-events-auto">
+              <div className="relative group/seal">
+                <div className="absolute inset-0 bg-gradient-to-br from-[#c4766f] to-[#8b4a44] rounded-full blur-xl opacity-60 group-hover/seal:opacity-100 transition-opacity duration-500 animate-pulse" />
+                <div className="relative w-32 h-32 md:w-40 md:h-40 bg-gradient-to-br from-[#d4867e] via-[#b76860] to-[#8b4a44] rounded-full flex items-center justify-center shadow-2xl border-4 border-[#a05850]/30 transition-all duration-500 group-hover/seal:scale-110 group-hover/seal:rotate-12">
+                  <span className="text-[#f5e6d3] font-cormorant font-semibold text-xl md:text-2xl tracking-[0.3em] uppercase">
+                    НАЖМИТЕ
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-12 text-center animate-fade-in" style={{ animationDelay: '0.5s' }}>
+            <p className="text-2xl md:text-4xl font-cormorant text-[#4a3f35] mb-2">
+              Нам очень, шёлно,
+            </p>
+            <p className="text-2xl md:text-4xl font-cormorant text-[#4a3f35]">
+              что вз разделите сно событие!
+            </p>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white animate-fade-in">
       <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-black via-gray-900 to-black overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.05),transparent_50%)]" />
         
