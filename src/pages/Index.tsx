@@ -298,9 +298,11 @@ const Index = () => {
             <p className="text-sm">127 из 170 мест уже забронировано</p>
           </div>
 
-          <Button onClick={() => setIsModalOpen(true)} className="bg-white text-[#f24822] hover:bg-white/90 px-12 py-8 text-xl font-bold">
-            Забронировать место на встрече →
-          </Button>
+          <a href="https://t.me/Primelogdv" target="_blank" rel="noopener noreferrer">
+            <Button className="bg-white text-[#f24822] hover:bg-white/90 px-12 py-8 text-xl font-bold">
+              Забронировать место на встрече →
+            </Button>
+          </a>
 
           <div className="mt-8 flex flex-col md:flex-row gap-4 justify-center items-center text-sm">
             <div className="flex items-center gap-2">
