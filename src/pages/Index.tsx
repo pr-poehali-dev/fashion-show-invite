@@ -40,7 +40,7 @@ const Index = () => {
             <img 
               src="https://cdn.poehali.dev/files/010aaffd-fc59-4109-ac42-d3a973af64ba.png" 
               alt="Приглашение" 
-              className="w-full max-w-3xl mx-auto drop-shadow-2xl transition-all duration-700 group-hover:scale-105"
+              className="w-full max-w-3xl mx-auto drop-shadow-2xl transition-all duration-700 group-hover:scale-105 group-hover:drop-shadow-[0_35px_60px_rgba(0,0,0,0.4)]"
             />
             <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
               <div className="text-center px-8 max-w-xl">
@@ -50,20 +50,13 @@ const Index = () => {
                 </h1>
               </div>
             </div>
-            <div className="absolute bottom-[15%] left-1/2 -translate-x-1/2">
-              <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-br from-[#f24822] to-[#c73a1a] rounded-full blur-xl opacity-60 animate-pulse" />
-                <div className="relative w-32 h-32 md:w-40 md:h-40 bg-gradient-to-br from-[#f24822] to-[#c73a1a] rounded-full flex items-center justify-center shadow-2xl border-4 border-[#a02f15]/30 transition-all duration-500 hover:scale-110 hover:rotate-12">
-                  <span className="text-white font-bold text-xl md:text-2xl tracking-widest" style={{ fontFamily: 'Montserrat, sans-serif' }}>
-                    ОТКРЫТЬ
-                  </span>
-                </div>
-              </div>
-            </div>
           </div>
           <div className="mt-12 animate-fade-in" style={{ animationDelay: '0.5s' }}>
             <p className="text-2xl md:text-3xl text-[#4a3f35] font-light" style={{ fontFamily: 'Montserrat, sans-serif' }}>
               Закрытое бизнес-событие для предпринимателей
+            </p>
+            <p className="text-lg md:text-xl text-[#4a3f35]/60 mt-4 italic" style={{ fontFamily: 'Montserrat, sans-serif' }}>
+              Кликните на конверт
             </p>
           </div>
         </div>
